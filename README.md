@@ -59,24 +59,15 @@ A production-grade AI-powered banking fraud detection system that combines graph
 - Feature engineering (behavioral, temporal, amount-based)
 - Entity generation (accounts, merchants, devices)
 
-### 2. Neo4j Graph Database Integration
-- Automatic graph loading from processed data
-- Node types: Account, Transaction, Merchant, Device
-- Relationships: MAKES, TO, USES
-- Graph analytics:
-  - Node degree analysis
-  - PageRank centrality
-  - Community detection (Louvain)
-  - Fraud ring detection
 
-### 3. Machine Learning Models
+### 2. Machine Learning Models
 - **XGBoost** (primary model)
 - **Random Forest** (baseline comparison)
 - Feature importance analysis
 - SMOTE for class imbalance handling
 - Cross-validation
 
-### 4. Fraud Risk Engine
+### 3. Fraud Risk Engine
 - Probability scoring (0-1)
 - Risk levels: HIGH (>0.8), MEDIUM (0.4-0.8), LOW (<0.4)
 - Graph-based flags:
@@ -86,7 +77,7 @@ A production-grade AI-powered banking fraud detection system that combines graph
 - Investigation priority scoring
 - Anomaly detection (Isolation Forest)
 
-### 5. Enterprise Dashboard (Streamlit)
+### 4. Enterprise Dashboard (Streamlit)
 - **Fraud Monitoring KPIs**
   - Total transactions, fraud rates, risk distribution
   - Trend charts, community analysis
@@ -99,7 +90,7 @@ A production-grade AI-powered banking fraud detection system that combines graph
   - Account deep-dive
   - Network graph visualization
 
-### 6. REST API (FastAPI)
+### 5. REST API (FastAPI)
 - Real-time fraud prediction endpoint
 - Batch scoring
 - Summary statistics
@@ -145,7 +136,6 @@ fraud_detection_graph_ai/
 
 ### Prerequisites
 - Python 3.11+
-- Neo4j Desktop (optional, for graph visualization)
 
 ### 1. Clone and Install Dependencies
 
@@ -161,15 +151,6 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Neo4j Setup (Optional)
-
-For full graph functionality, install Neo4j:
-
-```bash
-# Download Neo4j Desktop from https://neo4j.com/download/
-# Or use Docker:
-docker run -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/password neo4j:5.14.0
-```
 
 Configure credentials in `src/graph_loader.py`:
 ```python
@@ -361,3 +342,4 @@ For issues and questions:
 <p align="center">
   <strong>FraudGuard AI - Protecting Financial Transactions with Graph Intelligence</strong>
 </p>
+
